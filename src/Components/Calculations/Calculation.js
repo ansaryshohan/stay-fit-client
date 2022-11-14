@@ -7,10 +7,13 @@ import './Calculation.css';
 
 const Calculation = () => {
   return (
-    <div >
+    <div className='sticky top-0'>
+      <div className='flex flex-col gap-5 p-5 sticky top-0'>
       <ProfileDetails></ProfileDetails>
       <Break></Break>
       <ExerciseDetails></ExerciseDetails>
+      <button className='activity-btn  w-full p-3 text-2xl font-bold mt-7 rounded-xl'>Activity Completed</button>
+      </div>
     </div>
   );
 };

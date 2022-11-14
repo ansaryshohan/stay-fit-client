@@ -1,0 +1,8 @@
+.activity-btn{
+  background-color: #6b705c;
+  color: white;
+}
+.activity-btn:hover{
+  background-color: #cb997e;
+  color: black;
+}

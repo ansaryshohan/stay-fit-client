@@ -15,27 +15,27 @@ const Home = () => {
 
 
   return (
-      <div className="main-body md:grid md:grid-cols-4">
+      <div className="main-body md:grid md:grid-cols-4 lg:grid lg:grid-cols-4">
     {/* the product div */}
-    <div className='product-section md:col-span-3 mx-auto '>
+    <div className='product-section md:col-span-2 lg:col-span-3 mx-auto '>
       {/* the logo continer */}
-      <div className='flex gap-2 items-center'>
+      <div className='flex gap-2 items-center logo-container'>
         <FontAwesomeIcon icon={faDumbbell}  className='text-4xl'/>
         <h1 className='text-4xl font-semibold'> STAY-FIT</h1>
       </div>
       {/* the product continer */}
-      <div className=' mt-3'>
-          <h1 className='text-2xl font-medium'>Select today's activity</h1>
-          
+      <div className=' mt-5'>
+          <h1 className='text-2xl font-medium mb-5'>Select today's activity</h1>
+
           {/* Product showing map here */}
-          <div className='lg:grid lg:grid-cols-3 md:grid md:grid-cols-2 grid grid-cols-1  gap-5'>
+          <div className='lg:grid lg:grid-cols-3 md:grid md:grid-cols-1 grid grid-cols-1  gap-5'>
           {products.map(product=><Products key={product._id} product={product}></Products>)}
           </div>
       </div>
     </div>
 
     {/* the cart div */}
-    <div className='calculation-section'>
+    <div className='calculation-section md:col-span-2 lg:col-span-1'>
       <Calculation></Calculation>
     </div>
 
