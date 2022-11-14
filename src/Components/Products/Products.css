@@ -1,0 +1,13 @@
+.product-card{
+  box-shadow: 2px 4px 3px #6b705c ;
+  background-color: #E9EDC9;
+}
+.btn-card{
+  background-color: #6b705c;
+}
+.btn-card:hover{
+  background-color: #cb997e;
+  color:black;
+  transition: 0.4s;
+  font-weight: 700;
+}
