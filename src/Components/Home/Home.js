@@ -26,6 +26,8 @@ const Home = () => {
       {/* the product continer */}
       <div className=' mt-3'>
           <h1 className='text-2xl font-medium'>Select today's activity</h1>
+          
+          {/* Product showing map here */}
           <div className='lg:grid lg:grid-cols-3 md:grid md:grid-cols-2 grid grid-cols-1  gap-5'>
           {products.map(product=><Products key={product._id} product={product}></Products>)}
           </div>

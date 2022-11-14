@@ -1,0 +1,16 @@
+.break-btn-div{
+  background-color: #FEFAE0;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.break-btn{
+  background-color: #E9EDC9;
+  outline: 0;
+  box-shadow: 1px 2px 4px #6b705c;
+}
+.break-btn:hover{
+  background-color: #6b705c;
+  color: white;
+  transition: 0.3s;
+}
