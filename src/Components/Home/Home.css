@@ -1,3 +1,10 @@
 .main-body{
   background-color: #FEFAE0;
 }
+.product-section{
+  padding: 60px 60px 10px 70px ;
+}
+.calculation-section{
+  background-color: #E9EDC9;
+  padding: 10px;
+}

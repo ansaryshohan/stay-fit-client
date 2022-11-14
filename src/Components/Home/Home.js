@@ -15,9 +15,9 @@ const Home = () => {
 
 
   return (
-      <div className="main-body">
+      <div className="main-body md:grid md:grid-cols-4">
     {/* the product div */}
-    <div>
+    <div className='product-section md:col-span-3 mx-auto '>
       {/* the logo continer */}
       <div className='flex gap-2 items-center'>
         <FontAwesomeIcon icon={faDumbbell}  className='text-4xl'/>
@@ -33,7 +33,7 @@ const Home = () => {
     </div>
 
     {/* the cart div */}
-    <div>
+    <div className='calculation-section'>
       <Calculation></Calculation>
     </div>
 
