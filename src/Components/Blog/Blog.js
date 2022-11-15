@@ -21,7 +21,7 @@ const Blog = () => {
               <th>State</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className='text-lg '>
             <tr>
               <td>1.Props are read only.</td>
               <td>1.State changes can be asynchronous.</td>
