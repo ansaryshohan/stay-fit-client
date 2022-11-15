@@ -7,11 +7,18 @@ import Calculation from '../Calculations/Calculation';
 
 const Home = () => {
   const[products,setProducts]=useState([]);
+  const[times,setTimes]=useState([]);
+
   useEffect(()=>{
     fetch('data.json')
     .then(res=>res.json())
     .then(data=>setProducts(data))
   },[])
+
+  const handleAddToCart=(time)=>{
+    const timesArray=[...times, time];
+    setTimes(timesArray);
+  }
 
 
   return (
@@ -29,14 +36,19 @@ const Home = () => {
 
           {/* Product showing map here */}
           <div className='lg:grid lg:grid-cols-3 md:grid md:grid-cols-1 grid grid-cols-1  gap-5'>
-          {products.map(product=><Products key={product._id} product={product}></Products>)}
+          {products.map(product=>
+          <Products 
+          key={product._id} 
+          product={product}
+          handleAddToCart={handleAddToCart}>
+           </Products>)}
           </div>
       </div>
     </div>
 
     {/* the cart div */}
     <div className='calculation-section md:col-span-2 lg:col-span-1'>
-      <Calculation></Calculation>
+      <Calculation times={times}></Calculation>
     </div>
 
     </div>
