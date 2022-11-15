@@ -11,6 +11,19 @@ const ExerciseDetails = ({times, breakTimes}) => {
   for(const breakTime of breakTimes){
     BreakTime=breakTime;
   }
+   const existing=localStorage.getItem('breakTime');
+   if(existing){
+     BreakTime=existing;
+     for(const breakTime of breakTimes){
+       BreakTime=breakTime;
+      }
+       localStorage.setItem('breakTime', BreakTime);
+
+   }
+   else{
+    localStorage.setItem('breakTime', BreakTime);
+   }
+
   return (
     <div>
       <h1 className='text-xl font-medium mt-2'>Exercise Details</h1>
